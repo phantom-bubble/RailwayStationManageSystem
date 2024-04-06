@@ -8,6 +8,14 @@ int main() {
   using namespace station_system;
   ifstream ifs{"test.data"};
   auto t = train("", route({}));
+
   t->load(ifs);
+
+  cout << t->code() << endl;
+
+  t->route()->save(cout);
+
+  endl(cout);
+
   t->save(cout);
 }
